@@ -19,3 +19,6 @@ en:
   fetch_updates:
     label: Fetch updates from repository
     description: 'This option fetches updates from remote repository. Set it to "No" if repository shared (for example if Gitlab and Redmine on the same machine).'
+  oauth2_token:
+    label: token for usage gitlab
+    description: 'this token usage for gitlab fetch repositories'
