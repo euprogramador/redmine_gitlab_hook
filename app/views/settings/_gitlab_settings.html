@@ -35,4 +35,9 @@
         <%= check_box_tag('settings[fetch_updates]', 'yes', settings['fetch_updates'] == 'yes' ) %>
         <em class="info"><%= l('fetch_updates.description') %></em>
     </p>
+    <p>
+        <%= content_tag(:label, l('oauth2_token.label')) %>
+        <%= text_field_tag('settings[oauth2_token]', settings['oauth2_token'],:size=>50) %>
+        <em class="info"><%= l('oauth2_token.description') %></em>
+    </p>
 </fieldset>
