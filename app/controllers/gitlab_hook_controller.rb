@@ -159,7 +159,7 @@ class GitlabHookController < ActionController::Base
     unless File.exists?(git_file)
       FileUtils.mkdir_p(local_url)
       token = Setting.plugin_redmine_gitlab_hook['oauth2_token']
-      remote_url = remote_url.insert(remote_url.start_with?('https://')? 8:7 ,'oauth2:#{token}@')
+      remote_url = remote_url.insert(remote_url.start_with?('https://')? 8:7 ,"oauth2:#{token}@")
       command = clone_repository(prefix, remote_url, local_url)
       unless exec(command)
         raise RuntimeError, "Can't clone URL #{remote_url}"
